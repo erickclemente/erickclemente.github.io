@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Genevia Portal</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", sans-serif;
+    background:#f3f5f4;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#33403d;
+}
+
+.container{
+    width:1100px;
+    height:680px;
+    background:white;
+    border-radius:24px;
+    overflow:hidden;
+    display:flex;
+    box-shadow:0 15px 45px rgba(0,0,0,0.08);
+}
+
+.left{
+    flex:1;
+    background:linear-gradient(135deg,#97ada5,#7f978f);
+    padding:70px;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    color:white;
+}
+
+.left::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.05);
+    top:-150px;
+    right:-120px;
+}
+
+.logo{
+    position:relative;
+    z-index:2;
+}
+
+.logo-text{
+    font-size:72px;
+    font-weight:300;
+    letter-spacing:-3px;
+    color:#e7efec;
+}
+
+.logo-circle{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    border:4px solid #df7f66;
+    border-radius:50%;
+    margin-left:8px;
+    transform:translateY(-8px);
+}
+
+.tagline{
+    position:relative;
+    z-index:2;
+}
+
+.tagline h1{
+    font-size:44px;
+    line-height:1.2;
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.tagline p{
+    max-width:480px;
+    line-height:1.8;
+    opacity:0.9;
+    font-size:17px;
+}
+
+.footer{
+    position:relative;
+    z-index:2;
+    opacity:0.75;
+    font-size:14px;
+}
+
+.right{
+    width:420px;
+    padding:70px 50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background:white;
+}
+
+.portal{
+    font-size:32px;
+    color:#61756f;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.sub{
+    color:#8b9491;
+    line-height:1.6;
+    margin-bottom:40px;
+}
+
+.group{
+    margin-bottom:22px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    color:#5f6b68;
+    font-size:14px;
+    font-weight:500;
+}
+
+input{
+    width:100%;
+    padding:16px;
+    border-radius:14px;
+    border:1px solid #dbe2df;
+    background:#fafbfb;
+    font-size:15px;
+    transition:0.3s;
+}
+
+input:focus{
+    outline:none;
+    border-color:#91a8a1;
+    background:white;
+    box-shadow:0 0 0 4px rgba(145,168,161,0.12);
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:28px;
+    font-size:14px;
+}
+
+.row a{
+    text-decoration:none;
+    color:#7f978f;
+    font-weight:600;
+}
+
+.btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:16px;
+    background:#7f978f;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(127,151,143,0.25);
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    background:#708880;
+}
+
+.notice{
+    margin-top:35px;
+    padding:18px;
+    border-radius:14px;
+    background:#f5f7f6;
+    color:#77827e;
+    font-size:13px;
+    line-height:1.7;
+}
+
+@media(max-width:950px){
+
+    body{
+        height:auto;
+        padding:20px;
+    }
+
+    .container{
+        flex-direction:column;
+        height:auto;
+    }
+
+    .right{
+        width:100%;
+    }
+
+    .logo-text{
+        font-size:54px;
+    }
+
+    .tagline h1{
+        font-size:34px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <div class="logo">
+            <span class="logo-text">Genevia</span>
+            <span class="logo-circle"></span>
+        </div>
+
+        <div class="tagline">
+
+            <h1>
+                Private Organization Portal
+            </h1>
+
+            <p>
+                Secure internal environment for authorized members,
+                administrative personnel and affiliated partners.
+                <br><br>
+                Access organizational resources, communications and
+                internal operational systems through the Genevia portal.
+            </p>
+
+        </div>
+
+        <div class="footer">
+            © 2026 Genevia Holdings • Confidential Access Network
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <div class="portal">
+            Member Login
+        </div>
+
+        <div class="sub">
+            Sign in using your authorized credentials to continue.
+        </div>
+
+        <div class="group">
+            <label>Email Address</label>
+            <input type="email" placeholder="member@genevia.org">
+        </div>
+
+        <div class="group">
+            <label>Password</label>
+            <input type="password" placeholder="••••••••••">
+        </div>
+
+        <div class="row">
+            <div>
+                <input type="checkbox"> Remember session
+            </div>
+
+            <a href="#">
+                Forgot password?
+            </a>
+        </div>
+
+        <button class="btn">
+            Access Portal
+        </button>
+
+        <div class="notice">
+            This platform is restricted to authorized individuals affiliated
+            with Genevia Office. Unauthorized access or distribution
+            is prohibited and monitored.
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
